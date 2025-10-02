@@ -7,7 +7,7 @@ string calculateLoginAward(int streak, bool isVIP, int level) {
     const string NORMAL = "Normal Award";
     const string NO = "No Award";
 
-    if ((streak == 100 || level == 100) && isVIP)
+    if ((streak == 100 && level == 100) || isVIP)
         return LEGENDARY;
     else if ((streak == 100 || level == 100) && !isVIP)
         return BIG;

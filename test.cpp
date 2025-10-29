@@ -43,3 +43,13 @@ TEST(CalculateLoginAwardTest, KTDongDieuKhien)
     EXPECT_EQ(calculateLoginAward(45, true, 10), NORMAL);
     EXPECT_EQ(calculateLoginAward(23, false, 49), NO);
 }
+
+TEST(CalculateLoginAwardTest, KTDongDuLieu)
+{
+    EXPECT_EQ(calculateLoginAward(100, true, 75), LEGENDARY);
+    EXPECT_EQ(calculateLoginAward(100, false, 70), BIG);
+    EXPECT_EQ(calculateLoginAward(50, true, 59), BIG);
+    EXPECT_EQ(calculateLoginAward(50, false, 60), NORMAL);
+    EXPECT_EQ(calculateLoginAward(10, true, 30), NORMAL);
+    EXPECT_EQ(calculateLoginAward(5, false, 20), NO);
+}
